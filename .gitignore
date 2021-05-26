@@ -139,4 +139,6 @@ dmypy.json
 *.onnx
 *.index
 *.meta
-.data-00000-of-00001
+*.data-00000-of-00001
+*.vec
+*.bmp
