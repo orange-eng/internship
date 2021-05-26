@@ -1,0 +1,2 @@
+model_checkpoint_path: "my-gender-v1.0"
+all_model_checkpoint_paths: "my-gender-v1.0"
