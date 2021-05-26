@@ -17,7 +17,7 @@ np.set_printoptions(suppress=True)
 # input_image = train_data.images[0:1]
 # print("input_image:",input_image)
 
-input_image = 'images/2.jpg'
+input_image = 'images/1.jpg'
 input_image = cv.imread(input_image)
 
 input_image = cv.resize(input_image,(92,112)).flatten()
