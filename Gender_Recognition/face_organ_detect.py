@@ -19,7 +19,7 @@ path = os.path.abspath(os.path.dirname(sys.argv[0]))
 ap = argparse.ArgumentParser()
 ap.add_argument("--shape-predictor", default=path + "/face_shape/shape_predictor_68_face_landmarks.dat",
                 help="path to facial landmark predictor")
-ap.add_argument("--image", default=path + "/img/smoke01.jpg",
+ap.add_argument("--image", default=path + "/images/5gender/image172.png",
                 help="path to input image")
 args = ap.parse_args()
 
@@ -67,7 +67,7 @@ for (i, rect) in enumerate(rects):
             #cv2.imshow("ROI", roi)
             cv2.imshow("Image", clone)
             cv2.waitKey(0)
-            cv2.imwrite(path + "/result/result_{}.jpg".format(name),clone)
+            #cv2.imwrite(path + "/result/result_{}.jpg".format(name),clone)
             num = num + 1
             p = os.path.sep.join([temp_dir, "{}.jpg".format(
                 str(num).zfill(8))])
@@ -79,4 +79,4 @@ for (i, rect) in enumerate(rects):
     output = image
     cv2.imshow("Image", output)
     cv2.waitKey(0)
-    cv2.imwrite(path + "/result/result.jpg",output)
+    #cv2.imwrite(path + "/result/result.jpg",output)
