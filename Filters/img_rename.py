@@ -1,9 +1,9 @@
 import os
 class ImageRename():
     def __init__(self):
-        self.path = r"img\\check_in_dataset"  # 需要改名的文件
+        self.path = r"img\\GOOD_CASE"  # 需要改名的文件
 
-        self.path1 = r"img\\check_in_dataset_out" # 改名后文件存在的路径
+        self.path1 = r"img\\GOOD_CASE" # 改名后文件存在的路径
 
     # 'norain-1000x2.png', 'norain-1001x2.png',
     def re_name(self):
