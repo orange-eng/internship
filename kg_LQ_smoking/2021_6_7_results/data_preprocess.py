@@ -49,7 +49,7 @@ def download_from_urls(video_url,num):
         # print("mp4:",mp4file)
         # print("value_element:",value_element)
         file_name = wget.download(mp4file,out= "{}.mp4".format(num))
-        print(file_name)
+        # print(file_name)
         # cmd = f"wget -q '{mp4file}' -O {output_vid_name}"
         # print("CMD: ", cmd)
         # ret = os.system(cmd)
