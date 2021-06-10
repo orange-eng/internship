@@ -23,7 +23,7 @@ from matplotlib import pyplot as plt
 # cap.release()
 # cv2.destroyAllWindows()
 
-img = cv2.imread('imgs/4.jpg')
+img = cv2.imread('imgs/low_quality1.jpg')
 mask = np.zeros(img.shape[:2],np.uint8)
 
 
