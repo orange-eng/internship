@@ -42,3 +42,17 @@ Whatever,  I just try my best to explain my ideas. It's all over. And my grade i
 ## 2021/6/11
 
 Today, we have a meeting with Pro Liu, who is the leader of our team. he is so strong, from MIT and Singapore. They just change the structure of each person so as to make inspiration for them to get higher. Instead of hierarchy, they have more oppoertunity to make improvement and get higher level in the future. What's more, maybe I have a chance to get recommendation from Pro Liu!
+
+There are some trouble about our team, and I just list some of them:
+
+1. Value of each person is not so clear, which make it hard to find the donation of them.
+2. It is so difficult to get higher under hierarchy
+3. The project is so solid that there is not any contest in work.
+
+So they make some progress.
+
+1.destroy the hierarchy and establish the equal value.
+
+2.make it clear about each one's work
+
+3.finish the task without bound and make some fint-tuning in each task
