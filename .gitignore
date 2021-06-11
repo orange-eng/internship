@@ -145,3 +145,4 @@ dmypy.json
 *.pth
 *.gif
 *.tar
+*.pyc
