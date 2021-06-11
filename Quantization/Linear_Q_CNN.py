@@ -187,14 +187,27 @@ def main():
     torch.save(model.state_dict(),"Linear_mnist_Q_cnn.pt")
     return model, quant_model
 
-#model, quant_model = main()
+# 可视化
+from matplotlib import pyplot as plt
+def plot_weight(model):
+    modules = [module for module in model.modules()]
+    num_sub_plot = 0
+    for i,layer in enumerate(modules):
+        if hasattr(layer, 'weight'):
+            plt.subplot(221+num_sub_plot)
+            w = layer.weight.data
+            w_one_dim = w.cpu().numpy().flatten()
+            plt.hist(w_one_dim, bins=50)
+            num_sub_plot += 1
+    plt.show()        
 
 
+model, quant_model = main()
+
+plot_weight(model)
+plot_weight(quant_model)
 
 
-
-
-
-w = torch.rand(3,4)
-print(w)
-print(dequantize_tensor(*(quantize_tensor(w,num_bits=2))))
+# w = torch.rand(3,4)
+# print(w)
+# print(dequantize_tensor(*(quantize_tensor(w,num_bits=2))))
