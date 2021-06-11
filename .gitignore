@@ -146,3 +146,5 @@ dmypy.json
 *.gif
 *.tar
 *.pyc
+*.gz
+/Quantization/data/*
