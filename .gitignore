@@ -147,4 +147,7 @@ dmypy.json
 *.tar
 *.pyc
 *.gz
+*.pickle
 /Quantization/data/*
+/Video_Generation/MakeItTalk/examples_cartoon/*
+/Video_Generation/MakeItTalk/examples/*
