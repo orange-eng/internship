@@ -151,4 +151,4 @@ dmypy.json
 /Quantization/data/*
 /Video_Generation/MakeItTalk/examples_cartoon/*
 /Video_Generation/MakeItTalk/examples/*
-/Quantization/WAGE/dataSet/*
+/Quantization/WAGE/data/*
