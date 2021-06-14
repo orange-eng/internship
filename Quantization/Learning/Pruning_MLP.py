@@ -37,7 +37,7 @@ class MaskedLinear(nn.Linear):
         return self.mask
 
     def forward(self, x):
-        if self.mask_flag:
+        if self.mask_flag:      # 如果存在mask,那么进行裁减
             weight = self.weight * self.mask
             return F.linear(x, weight, self.bias)
         else:
@@ -109,8 +109,8 @@ def weight_prune(model, pruning_perc):
     threshold_list = []
     for p in model.parameters():
         if len(p.data.size()) != 1: # bias
-            weight = p.cpu().data.abs().numpy().flatten()
-            threshold = np.percentile(weight, pruning_perc)
+            weight = p.cpu().data.abs().numpy().flatten()       # 对权重求绝对值
+            threshold = np.percentile(weight, pruning_perc)     # 算出60%的阈值
             threshold_list.append(threshold)
 
     # generate mask
@@ -121,7 +121,7 @@ def weight_prune(model, pruning_perc):
             pruned_inds = p.data.abs() > threshold_list[idx]
             masks.append(pruned_inds.float())
             idx += 1
-    return masks
+    return masks            # 获得mask
 
 def main():
     epochs = 2

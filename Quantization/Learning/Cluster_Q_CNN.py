@@ -15,7 +15,7 @@ path = os.path.abspath(os.path.dirname(sys.argv[0]))
 
 
 def k_means_cpu(weight,n_clusters,init='k-means++',max_iter=50):
-    # flatten the weight for computing k-means
+    
     org_shape = weight.shape
     weight = weight.reshape(-1,1)  # single feature，把整个向量拉直
     #print("weight=",weight)

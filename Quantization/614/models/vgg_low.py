@@ -15,6 +15,7 @@ class VGG(nn.Module):
                  num_classes=10, depth=16, batch_norm=False, wl_weight=-1, writer=None):
         super(VGG, self).__init__()
         quant = lambda name : WAGEQuantizer(wl_activate, wl_error, name, writer=writer)
+        
         self.features = nn.Sequential(*[
             # Turns out that the input quantization is never used in the original repo
             # Image input should already been quantized to 8-bits - no need do it again
