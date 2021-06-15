@@ -197,7 +197,7 @@ if __name__ == '__main__':
         time_ep = time.time()
         lr = schedule(epoch)
         writer.add_scalar("lr", lr, epoch)
-        grad_quantizer = lambda x : models.QG(x, args.wl_grad, args.wl_rand, lr)    
+        grad_quantizer = lambda x : models.QG(x, args.wl_grad, args.wl_rand, lr)       
         # wl_grad = 8, wl_rand=16
 
         train_res = utils.train_epoch(
