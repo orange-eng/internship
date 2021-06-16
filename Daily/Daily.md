@@ -56,3 +56,17 @@ So they make some progress.
 2.make it clear about each one's work
 
 3.finish the task without bound and make some fint-tuning in each task
+
+# 2021/6/15
+
+Today, My score about graduation design is coming, and I get 89.67 in result. What a pity. What I want to do is just making my GPA higher than the original~ That is a pity in my whole Bachelor degree.
+
+# 2021/6/16
+
+That's an interesting story~ I have loved the history of our country! There are lots of meaningful stories in it. And I can also get some useful ways to make friends with others.  
+
+今天忽然想看吕蒙擒关羽，于是在B站上看到一个博主的解说，才发现有很多细节没有把控好。比如，杀了关羽，虽然使得吕蒙名震天下，但是又给东吴带来巨大灾难。有时候真的不能意气行事，要顾全大局。  
+看着关羽也是来气，一生戎马，却因为过于傲慢，不听群臣劝阻，自以为是，最后葬送了自己。有时候真的要多听取忠言，不可以独断，铭记这个教训呀。  
+今天也发现了一个好博主，解说真的超级到位，有空一定要吧他的视频都看完，积累经验，顺便补充一下红楼梦也不是坏事呀。
+
+另外，今天我还完成了“地平线”公司的答辩操作。所说实话，这一周有点累，但是有的东西不懂就还是不懂，真的让人很头疼。但是面试官真的非常温顺，交流还是很开心的。不管结果如何，反正已经拿到百度研究院offer，很开心呀。
