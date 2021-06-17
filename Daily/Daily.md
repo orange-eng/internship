@@ -70,3 +70,8 @@ That's an interesting story~ I have loved the history of our country! There are 
 今天也发现了一个好博主，解说真的超级到位，有空一定要吧他的视频都看完，积累经验，顺便补充一下红楼梦也不是坏事呀。
 
 另外，今天我还完成了“地平线”公司的答辩操作。所说实话，这一周有点累，但是有的东西不懂就还是不懂，真的让人很头疼。但是面试官真的非常温顺，交流还是很开心的。不管结果如何，反正已经拿到百度研究院offer，很开心呀。
+
+# 2021/6/18
+I have some feelings about Bang Liu and Yu Xiang in history. That's also interesting and profounded for me.
+
+刘邦和项羽的故事一直都千古流传。一开始是项羽的气焰更胜，刘邦只是一个无名小卒，但是刘邦没有傲气，广识各路英雄豪杰，普通百姓出身，却也能灭亡秦国。这主要是因为他深得民心，体恤百姓，而且擅长交友，实在佩服。而项羽是西楚霸王，确因为格局太小，只想做楚国的君王，衣锦还乡而已。相比于刘邦，项羽显得有些幼稚，实在是悲哀至极。
