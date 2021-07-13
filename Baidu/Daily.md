@@ -80,3 +80,11 @@
 那个导游说的一句话挺对：来了景点下拍照，回去一问，啥都不知道。说的正是很多普通游客，不懂这些景点的背景知识，就走马观花，确实不值哈。
 
 苏州街，仿照江南水乡建成，确实很像哈。
+
+# 2021/7/13
+## Meeting  
+- Maximum Likelihood approach
+- Expectation Maximization Algorithm and Monte Carlo variant  
+- Two-Time-Scale Stochastic EM(TTSEM)
+- Gaussian Mixture Models
+- Deformable Template for Image Analysis
