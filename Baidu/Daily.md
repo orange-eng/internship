@@ -77,7 +77,7 @@
 
 昆明湖中很多船，周围也是人山人海。十七孔桥雪白，中间一座岛。整体感觉还是很不错，爬了爬山，练一练体能。
 
-那个导游说的一句话挺对：来了景点下拍照，回去一问，啥都不知道。说的正是很多普通游客，不懂这些景点的背景知识，就走马观花，确实不值哈。
+那个导游说的一句话挺对：来了景点瞎拍照，回去一问，啥都不知道。说的正是很多普通游客，不懂这些景点的背景知识，就走马观花，确实不值哈。
 
 苏州街，仿照江南水乡建成，确实很像哈。
 
@@ -88,3 +88,27 @@
 - Two-Time-Scale Stochastic EM(TTSEM)
 - Gaussian Mixture Models
 - Deformable Template for Image Analysis
+
+## DRMI  
+Need many queries. Detection, Attack & Accuracy.  
+We need Dataset of similiar distribution  
+- High mutual information means high redundancy
+- Goal of DRMI
+
+## Testing OIA's linguistic abilities
+- Yuhan Zhang
+- How do we evaluate language models?
+- What do we know from the evaluation results?
+- Can SOTA models learn features unique to language?
+- OIA: Open Information Annotation is a set of rule based guidelines. Base: Universal Dependency
+  - Center-enbedding
+  - Main verb/Reduced relative clause garden-path sentences
+  - Subject/object garden-path sentences
+  - Pseudo-cleft sentences
+  - Pilot testing
+- Next step
+  - testing  suits preparations
+  - Running tests in OIA/OIE models/Parsing trees
+  - Evaluate and improvement
+
+这位师姐是来自牛津大学的语言学专业，这英语真的很无敌，好羡慕。比美国本土有一拼。
