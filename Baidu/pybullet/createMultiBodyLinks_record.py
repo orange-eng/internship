@@ -1,6 +1,7 @@
 import pybullet as p
 import time
 import pybullet_data
+import os
 
 p.connect(p.GUI)
 p.setAdditionalSearchPath(pybullet_data.getDataPath())
@@ -13,27 +14,17 @@ colSphereId = p.createCollisionShape(p.GEOM_SPHERE, radius=sphereRadius)
 mass = 1
 visualShapeId = -1
 
-link_Masses = [1]
-
-linkVisualShapeIndices = [-1]
-linkPositions = [[0, 0, 0.11]]
-linkOrientations = [[0, 0, 0, 1]]
-linkInertialFramePositions = [[0, 0, 0]]
-linkInertialFrameOrientations = [[0, 0, 0, 1]]
-indices = [0]
-jointTypes = [p.JOINT_REVOLUTE]
-axis = [[0, 0, 1]]
-
-
+sum_sphereUid = []
 for j in range(2):
   for k in range(2):
     basePosition = [
-        0, 1 + j * 2 * sphereRadius + k * sphereRadius, 1 + k * 2 * sphereRadius + 1
+        0, 0.2 + j * 2 * sphereRadius + k * sphereRadius, 1 + k * 2 * sphereRadius
     ]
     baseOrientation = [0, 0, 0, 1]
     # you can create a multi body using createMultiBody
     sphereUid = p.createMultiBody(mass, colSphereId, visualShapeId, basePosition,
                                   baseOrientation)
+    sum_sphereUid.append(sphereUid)
     # You can change the properties such as mass, friction and restitution coefficients using changeDynamics.
     p.changeDynamics(sphereUid,
                       -1,
@@ -51,8 +42,23 @@ p.getNumJoints(sphereUid)
 for i in range(p.getNumJoints(sphereUid)):
   p.getJointInfo(sphereUid, i)
 
-while (1):
-  keys = p.getKeyboardEvents()
-  print(keys)
+def get_pos(x):
+  _output = list(p.getBasePositionAndOrientation(x)[0])
+  output = []
+  output.append(round(_output[1],4))
+  output.append(round(_output[2],4))
+  return output
 
+list_dir = os.listdir("dataset\\")
+current_path = "dataset\\" # 新创建的txt文件的存放路径
+full_path = current_path + str(len(list_dir)) + '.txt' # 也可以创建一个.doc的word文档
+file = open(full_path, 'a')
+
+for _ in range(200):
+  cubePos = list(map(get_pos,sum_sphereUid))
+  cubePos = str(cubePos)
+  file.write(cubePos) #msg也就是下面的Hello world!
+  file.write("\n")
   time.sleep(0.01)
+
+file.close()
