@@ -156,4 +156,14 @@ We need Dataset of similiar distribution
 **Manipulating Stochastic Gradient Noise**
 **Understanding and Scheduling Weight Decay**
 
-印度研究员的口语也很棒呀！ How do you compare your way with other. 
+印度研究员的口语也很棒呀！ How do you compare your way with other.
+
+## Open Commonsense Reasoning with pen Information Annotation Graphs
+- Training Dense Passage Retriever
+- Inference with Dense Passage Retriever
+
+- Encode Single OIA Graphs
+- Encode Joint OIA-Graphs
+- Subgraph Reasoning on Joint-OIA Graph
+
+They will offer some useful suggestions for your current works.
