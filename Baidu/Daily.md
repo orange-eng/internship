@@ -137,3 +137,23 @@ We need Dataset of similiar distribution
 很难想象，那些保存了上万年的东西可以流传至今，它们记录了地球的年龄，它们是真正的历史。走在这里，穿越时空，感受历史，以史为鉴。
 # 2021/7/19
 开始使用paddle重构图网络了。好好吃饭，好好休息，高效工作！
+
+# 2021/7/20  
+
+## Design a better optimizer
+- Escape Saddle Points: Adam > Momentum > SGD
+- Select Flat Minima: Momentum = SGD > Adam
+- Adaptive Inertia Optimizer(Adai)
+- Neural Variable Risk
+- Neural Variability in Neuroscience
+- Noise memorization and overfitting
+
+**Neural Variability is very helpful for DL**
+**NVRM can effictively relieve two serious issues: overfitting and catastrophic frogetting**
+**We can theoretically understand NVRM from the information theoretical perspective and the diffusion perspective**
+
+##Future Work
+**Manipulating Stochastic Gradient Noise**
+**Understanding and Scheduling Weight Decay**
+
+印度研究员的口语也很棒呀！ How do you compare your way with other. 
