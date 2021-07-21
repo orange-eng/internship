@@ -2,9 +2,12 @@
 
 # from learning_to_simulate import connectivity_utils
 # from learning_to_simulate import graph_network
+import paddle
 import connectivity_utils_paddle
 import graph_network_paddle
 import paddle.nn as nn
+import numpy as np
+import pgl
 
 STD_EPSILON = 1e-8
 
@@ -43,7 +46,7 @@ class LearnedSimulator(object):
     return next_position
 
   def _encoder_preprocessor(
-      self, position_sequence, n_node):
+      self, position_sequence, n_node,global_context,particle_types):
     # Extract important features from the position_sequence.
     most_recent_position = position_sequence[:, -1]
     velocity_sequence = time_diff(position_sequence)  # Finite-difference.
@@ -66,64 +69,62 @@ class LearnedSimulator(object):
     normalized_velocity_sequence = (
         velocity_sequence - velocity_stats.mean) / velocity_stats.std
 
-    flat_velocity_sequence = snt.MergeDims(start=1, size=2)(
-        normalized_velocity_sequence)
-  #   node_features.append(flat_velocity_sequence)
+    ########################################################
+    flat_velocity_sequence = paddle.reshape(normalized_velocity_sequence,(1444,10))
+    node_features.append(flat_velocity_sequence)
 
-  #   # Normalized clipped distances to lower and upper boundaries.
-  #   # boundaries are an array of shape [num_dimensions, 2], where the second
-  #   # axis, provides the lower/upper boundaries.
-  #   boundaries = tf.constant(self._boundaries, dtype=tf.float32)
-  #   distance_to_lower_boundary = (
-  #       most_recent_position - tf.expand_dims(boundaries[:, 0], 0))
-  #   distance_to_upper_boundary = (
-  #       tf.expand_dims(boundaries[:, 1], 0) - most_recent_position)
-  #   distance_to_boundaries = tf.concat(   # 拼接张量操作
-  #       [distance_to_lower_boundary, distance_to_upper_boundary], axis=1)
-  #   normalized_clipped_distance_to_boundaries = tf.clip_by_value(   # tf.clip_by_value(V, min, max), 截取V使之在min和max之间
-  #       distance_to_boundaries / self._connectivity_radius, -1., 1.)
-  #   # 将距离控制在-1~1之间
-  #   node_features.append(normalized_clipped_distance_to_boundaries)
+    # Normalized clipped distances to lower and upper boundaries.
+    # boundaries are an array of shape [num_dimensions, 2], where the second
+    # axis, provides the lower/upper boundaries.
+    boundaries = np.array(self._boundaries)
 
-  # #   # Particle type.
-  #   # tf.nn.embedding_lookup查找数组中的序号为particle_types的元素
-  #   if self._num_particle_types > 1:
-  #     particle_type_embeddings = tf.nn.embedding_lookup(
-  #         self._particle_type_embedding, particle_types)
-  #     node_features.append(particle_type_embeddings)
+    # x[:,n]就是取所有集合的第n个数据
+    distance_to_lower_boundary = most_recent_position - boundaries[:, 0]
+    distance_to_upper_boundary = boundaries[:, 1] - most_recent_position
+    distance_to_boundaries = paddle.concat(   # 拼接张量操作
+        [distance_to_lower_boundary, distance_to_upper_boundary], axis=1)
+    normalized_clipped_distance_to_boundaries = paddle.clip(
+      distance_to_boundaries / self._connectivity_radius,min = -1,max=1
+    )
+    # 将距离控制在-1~1之间
+    node_features.append(normalized_clipped_distance_to_boundaries)
 
-  # #   # Collect edge features.
-  #   edge_features = []
-  #   #1. normalized_realative_displacements = sender - receiver / radius
-  #   #2. normalized_relative_distances       向量/矩阵的范数
-  #   # Relative displacement and distances normalized to radius
-  #   normalized_relative_displacements = (
-  #       tf.gather(most_recent_position, senders) -
-  #       tf.gather(most_recent_position, receivers)) / self._connectivity_radius
-  #   # sender - receiver / radius
-  #   edge_features.append(normalized_relative_displacements)
+    # Particle type.
+    # tf.nn.embedding_lookup查找数组中的序号为particle_types的元素
+    if self._num_particle_types > 1:
+      particle_type_embeddings = paddle.gather(
+          self._particle_type_embedding, particle_types)  # particle_types存储着标号
+      node_features.append(particle_type_embeddings)
 
-  #   normalized_relative_distances = tf.norm(
-  #       normalized_relative_displacements, axis=-1, keepdims=True)
-  #   edge_features.append(normalized_relative_distances)
+  #   # Collect edge features.
+    edge_features = []
+    #1. normalized_realative_displacements = sender - receiver / radius
+    #2. normalized_relative_distances       向量/矩阵的范数
+    # Relative displacement and distances normalized to radius
+    normalized_relative_displacements = (
+        paddle.gather(most_recent_position, senders) -
+        paddle.gather(most_recent_position, receivers)) / self._connectivity_radius
+    # sender - receiver / radius
+    edge_features.append(normalized_relative_displacements)
 
-  #   # Normalize the global context.
-  #   if global_context is not None:
-  #     context_stats = self._normalization_stats["context"]
-  #     # Context in some datasets are all zero, so add an epsilon for numerical
-  #     # stability.
-  #     global_context = (global_context - context_stats.mean) / tf.math.maximum(
-  #         context_stats.std, STD_EPSILON)
+    normalized_relative_distances = paddle.norm(
+        normalized_relative_displacements,axis=-1,keepdim=True)
+    edge_features.append(normalized_relative_distances)
 
-  #   return gn.graphs.GraphsTuple(
-  #       nodes=tf.concat(node_features, axis=-1),
-  #       edges=tf.concat(edge_features, axis=-1),
-  #       globals=global_context,  # self._graph_net will appending this to nodes.
-  #       n_node=n_node,
-  #       n_edge=n_edge,
-  #       senders=senders,
-  #       receivers=receivers,
-  #       )
+    # Normalize the global context.
+    if global_context is not None:
+      context_stats = self._normalization_stats["context"]
+      # Context in some datasets are all zero, so add an epsilon for numerical
+      # stability.
+      global_context = (global_context - context_stats.mean) / paddle.maximum(
+          context_stats.std, STD_EPSILON)
+
+    return pgl.Graph(
+      edges=n_edge,
+      num_nodes=n_node,
+      node_feat=paddle.concat(node_features,axis=-1),
+      edge_feat=paddle.concat(edge_features,axis=-1),
+    )
 
   def _decoder_postprocessor(self, normalized_acceleration, position_sequence):
 

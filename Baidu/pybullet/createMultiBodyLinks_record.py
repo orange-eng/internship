@@ -3,6 +3,8 @@ import time
 import pybullet_data
 import os
 import random
+import csv
+import pandas as pd
 
 
 for sum_100 in range(10):
@@ -53,15 +55,20 @@ for sum_100 in range(10):
     return output
 
   list_dir = os.listdir("dataset\\")
-  current_path = "dataset\\" # 新创建的txt文件的存放路径
-  full_path = current_path + str(sum_100) + '.txt' # 也可以创建一个.doc的word文档
-  file = open(full_path, 'a')
+  current_path = "dataset\\csv\\" # 新创建的txt文件的存放路径
+  full_path = current_path + str(sum_100) + '.csv' # 也可以创建一个.doc的word文档
+  file = open(full_path, 'w',newline='')
+  writer = csv.writer(file)
+
 
   for _ in range(100):
     cubePos = list(map(get_pos,sum_sphereUid))
-    cubePos = str(cubePos)
-    file.write(cubePos) #msg也就是下面的Hello world!
-    file.write("\n")
+    each_row = []
+    for i in range(4):
+      for j in range(2):
+        each_row.append(cubePos[i][j])
+    # 将数据写入到csv文件中
+    writer.writerow(each_row)  
     time.sleep(0.01)
 
   file.close()
