@@ -167,3 +167,8 @@ We need Dataset of similiar distribution
 - Subgraph Reasoning on Joint-OIA Graph
 
 They will offer some useful suggestions for your current works.
+
+# 2021/7/21
+
+今天，感冒了。状态不是很好。虽然感冒不是很严重，但是注意力无法集中。  
+放眼望去，大家都在看论文，改代码等等，这种氛围正是我想要的呀。
