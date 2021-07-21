@@ -47,8 +47,8 @@ class LearnedSimulator(snt.AbstractModule):
       graph_network_kwargs,
       boundaries,
       normalization_stats,
-      num_particle_types,
-      particle_type_embedding_size,
+      num_particle_types,             # 9
+      particle_type_embedding_size,   # 16
       name="LearnedSimulator"):
     """Inits the model.
 

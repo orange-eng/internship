@@ -31,11 +31,9 @@ class LearnedSimulator(object):
       self._graph_network = graph_network_paddle.EncodeProcessDecode(
           output_size=num_dimensions, **graph_network_kwargs)
 
-  def _build(self, position_sequence, n_particles_per_example,
-             global_context=None, particle_types=None):
+  def _build(self, position_sequence, n_particles_per_example):
     input_graphs_tuple = self._encoder_preprocessor(
-        position_sequence, n_particles_per_example, global_context,
-        particle_types)
+        position_sequence, n_particles_per_example)
 
     normalized_acceleration = self._graph_network(input_graphs_tuple)
 
@@ -44,27 +42,32 @@ class LearnedSimulator(object):
 
     return next_position
 
-  # def _encoder_preprocessor(
-  #     self, position_sequence, n_node, global_context, particle_types):
-  #   # Extract important features from the position_sequence.
-  #   most_recent_position = position_sequence[:, -1]
-  #   velocity_sequence = time_diff(position_sequence)  # Finite-difference.
+  def _encoder_preprocessor(
+      self, position_sequence, n_node):
+    # Extract important features from the position_sequence.
+    most_recent_position = position_sequence[:, -1]
+    velocity_sequence = time_diff(position_sequence)  # Finite-difference.
 
-  #   # Get connectivity of the graph.
-  #   (senders, receivers, n_edge
-  #    ) = connectivity_utils.compute_connectivity_for_batch_pyfunc(
-  #        most_recent_position, n_node, self._connectivity_radius)
+    # Get connectivity of the graph.
+    (senders, receivers, n_edge
+     ) = connectivity_utils_paddle.compute_connectivity_for_batch_pyfunc(
+         most_recent_position, n_node, self._connectivity_radius)
 
-  #   # Collect node features.
-  #   node_features = []
+    # Collect node features.
+    node_features = []
+    # node_feat总共包含以下几项：
+    # 1.flat_velocity_Sequence
+    # 2.distance_to_lower_boundary
+    # 3.distance_to_upper_boundary
+    # 4.particle_type_embeddings
 
-  #   # Normalized velocity sequence, merging spatial an time axis.
-  #   velocity_stats = self._normalization_stats["velocity"]
-  #   normalized_velocity_sequence = (
-  #       velocity_sequence - velocity_stats.mean) / velocity_stats.std
+    # Normalized velocity sequence, merging spatial an time axis.
+    velocity_stats = self._normalization_stats["velocity"]
+    normalized_velocity_sequence = (
+        velocity_sequence - velocity_stats.mean) / velocity_stats.std
 
-  #   flat_velocity_sequence = snt.MergeDims(start=1, size=2)(
-  #       normalized_velocity_sequence)
+    flat_velocity_sequence = snt.MergeDims(start=1, size=2)(
+        normalized_velocity_sequence)
   #   node_features.append(flat_velocity_sequence)
 
   #   # Normalized clipped distances to lower and upper boundaries.
@@ -75,25 +78,29 @@ class LearnedSimulator(object):
   #       most_recent_position - tf.expand_dims(boundaries[:, 0], 0))
   #   distance_to_upper_boundary = (
   #       tf.expand_dims(boundaries[:, 1], 0) - most_recent_position)
-  #   distance_to_boundaries = tf.concat(
+  #   distance_to_boundaries = tf.concat(   # 拼接张量操作
   #       [distance_to_lower_boundary, distance_to_upper_boundary], axis=1)
-  #   normalized_clipped_distance_to_boundaries = tf.clip_by_value(
+  #   normalized_clipped_distance_to_boundaries = tf.clip_by_value(   # tf.clip_by_value(V, min, max), 截取V使之在min和max之间
   #       distance_to_boundaries / self._connectivity_radius, -1., 1.)
+  #   # 将距离控制在-1~1之间
   #   node_features.append(normalized_clipped_distance_to_boundaries)
 
-  #   # Particle type.
+  # #   # Particle type.
+  #   # tf.nn.embedding_lookup查找数组中的序号为particle_types的元素
   #   if self._num_particle_types > 1:
   #     particle_type_embeddings = tf.nn.embedding_lookup(
   #         self._particle_type_embedding, particle_types)
   #     node_features.append(particle_type_embeddings)
 
-  #   # Collect edge features.
+  # #   # Collect edge features.
   #   edge_features = []
-
+  #   #1. normalized_realative_displacements = sender - receiver / radius
+  #   #2. normalized_relative_distances       向量/矩阵的范数
   #   # Relative displacement and distances normalized to radius
   #   normalized_relative_displacements = (
   #       tf.gather(most_recent_position, senders) -
   #       tf.gather(most_recent_position, receivers)) / self._connectivity_radius
+  #   # sender - receiver / radius
   #   edge_features.append(normalized_relative_displacements)
 
   #   normalized_relative_distances = tf.norm(
@@ -193,6 +200,7 @@ class LearnedSimulator(object):
     return normalized_acceleration
 
 
+# time_diff可以得到美意时刻的差值
 def time_diff(input_sequence):
   return input_sequence[:, 1:] - input_sequence[:, :-1]
 
