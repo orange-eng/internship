@@ -172,3 +172,78 @@ They will offer some useful suggestions for your current works.
 
 今天，感冒了。状态不是很好。虽然感冒不是很严重，但是注意力无法集中。  
 放眼望去，大家都在看论文，改代码等等，这种氛围正是我想要的呀。
+
+# 2021/7/23
+## Graph Generation with Reinforcement Learning
+- Sequence to Graph:
+  - Sentence to Dependency Graph
+  - Sentence to University Dependency
+- Challenges
+  - Structures and sizes of graphs are different
+  - No orders between nodes
+  - Discrete
+  - Non-Euclidean
+  - Generation Efficiency
+- OIE Graph
+  - Multi Sampling
+  - Generate multiple candidate Graphs
+  - Combine with beam search
+- Supervised Method
+  - Features to Adjacency Metrics Classication
+- Generative Models
+  - case study: MolGAN
+  - as MDP
+- Reinforement Learning for OIE Graph
+  - Actor-Critic
+  - Policy Gradient
+  - Update Model
+  - Data Collection
+  - Monte Carlo tree search:
+  - Selection->Expansion->Simulation->Backpropagation->Selection
+- Experiment
+  - Initial Results for OIE Graph Generation Task
+- Next Steps
+  - Improve RL Performance
+  - Complete Monte Carlo Implementation
+  - Complete multi sampling components
+
+## University of Brith Columbia
+- first-order methods for structured optimization
+- Optimization, machine learning, data mining
+  - General purpose optimization solver
+  - Training neural networks
+  - Training classic machine learning models
+  - Signal processing
+  - Discrete optimization
+  - PhD study
+
+- Motivation
+  - In the practice of training machine learning models
+  - Nonsmoothness from the model does not slow down our training in practice
+  - The learning rate scheduling can yield
+- Contributions
+  - We obtain ... for stochastic subgradient descent inder convex and interpolation assumption
+  - iteration complexity under strong convexity
+- Assumptions
+  - immediate question: rate for absolute value function?
+  - we assume the 1-dimensional loss function to be nonnegative, convex, 1-smooth function and inf int=0
+- Some semismooth properties cont
+- Convergence under convexity
+- Convergence under strong convexity
+- Lower bound
+  - with/without interpolation
+
+
+
+## 面试：
+- 1.聊一聊那个实习的经历，自己的贡献吧
+- 2.谈一谈research plan吧
+- 3.有没有一些其他的想法呢?   
+- 4.具体的研究课题有没有呢？  
+发现跟博士聊天就是不一样，怎么说，很难说清楚。偏理论的合作？面试官很亲和哦。不会很push你。
+
+
+## 聚餐
+有幸跟CCL的各位同事一起吃饭，实在是太荣幸了。没想到在这里也能遇到中科大的校友，正好老师是我师兄，哈哈。距离瞬间拉近了。老师是从中科大学数学出身，果然基础学科就是吃香，中科大校友真的随处可见。  
+虽然老师们都很有资历，但是聊天起来却十分亲和，各种开玩笑，氛围超级好。有时候也会有一些滑稽的语言。能和大家一起讨论学术，一起学习，一起科研，这种环境真的求之不得。  
+还想说一句，北京的物价真的好贵哦，简单一道白菜就要60+，这个账单分分钟上千。不敢想，北京的海底捞居然贵成这个样子。
