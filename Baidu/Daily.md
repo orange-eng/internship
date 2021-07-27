@@ -261,3 +261,49 @@ They will offer some useful suggestions for your current works.
 天台是由白色的玉石构成，可以上去看。很壮观。
 
 开眼界，开心~
+
+# 2021/7/27
+
+## Noise-robust information aggregation
+- Generate single-doc encoder
+- Accumulate knowledge
+- Select the most representative title of an article to be the headline of the story
+- Distant Supervion: Estimate Title Representative
+
+## UCPhrase: Unsupervised for phrase mining
+- Challenges for phrase mining
+  - Models
+    - Statistics-based Models
+    - Tagging-based Models
+  - Supervision
+    - Human Annotation
+
+- Step1:free supervision directly from the corpus
+  - How do human readers accumulate phrases?
+  - Mining core phrases as silver labels
+  - Compare core phrases with distant Supervision
+
+- Step2: suface-agnostic feature generation
+  - What's wrong with traditional embedding-based features?
+  - Extract knowledge directly from a pre-trained language model
+
+- Step3: phrase tagging as image classification
+  - Given a sentence, treat all possible ngrams as candidates
+
+## Adversarially Robust ML
+
+### Towards Robust Detection of Adversarial Examples
+
+- Phase1: reverse training
+  - Feature are mapped onto low-dimensional manifolds
+- Property1: consistent and unbiased
+- Property2: tighter bound
+- Intuitive insights of RCE training
+
+- robustness requires more data
+- Our solution: increase sample density to induce locally sufficient by softmax cross-entropy loss
+- Our method: Max-Mahalanobis center(MMC) loss
+
+### Max-Mahalanobis Linear Discriminant Analysis Networks
+
+- What if we could compute T-Con during inference?
