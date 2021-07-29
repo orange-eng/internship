@@ -307,3 +307,24 @@ They will offer some useful suggestions for your current works.
 ### Max-Mahalanobis Linear Discriminant Analysis Networks
 
 - What if we could compute T-Con during inference?
+
+# 2021/7/29
+
+## Backdoor Attack
+指的是在正常样本上，测试成功，但是在被后门激活之后，测试识别失败。  
+比较典型的说法有： Adversarial Example,  Data poison, Backdoor attack,发生在Data Collection中  
+- 后门攻击主要发生在：
+  - 公开数据集
+  - 预训练模型
+- 评价指标为 Attack success rate
+
+- Abnormal Detection
+- Back translation
+- Noise disturb
+- Design unnoticeable backdoor trigger
+- Defense
+
+## Discourse, sentential information structure
+消除歧义， Linguistic Discourse Model, basic discourse units  
+coordination and subcoordination  
+theme & rheme, background & focus
