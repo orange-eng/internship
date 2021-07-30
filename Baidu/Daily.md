@@ -328,3 +328,33 @@ They will offer some useful suggestions for your current works.
 消除歧义， Linguistic Discourse Model, basic discourse units  
 coordination and subcoordination  
 theme & rheme, background & focus
+
+# 2021/7/30
+## Arbitrary-order Proximity Preserved Network Embedding
+- Different High-Order Proximities
+  - Different networks/tasks require different high-order Proximities
+  - Proximities of different orders can be arbitrarily weighted
+  - Eigen-decomposition reweighting
+  - Shifting across different orders/weights
+- Network Embedding in Dynamic Environment
+  - RandNE: Iterative Projection
+
+- Can GNNs Fully Preserve Graph Structures?
+- Eigen-GNN: A Graph Structure Preserving Plug-in
+
+- Existing Problems in Traditional Graph Learning methods
+   - Manually design architectures and hyper-parameters through trial-and-error
+   - Each task needs be handled separately
+- Automated Graph learning
+  - AutoGL Dataset: manage graph datasets
+  - AutoGL Solver: a high-level API to control the overall pipeline
+  - Hyper-Parameter
+
+## Multivariate Features
+- Many phenomena emerge from interactions among agents
+- Measuring Uncertainty: Entropy
+- Mutual Infformation is Non-Linear
+- Information Decomposition Through Projections
+- Application: Hypothesis
+- Application: Interactions in Brain Activities
+### Gaussian Channel models
