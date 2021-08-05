@@ -399,3 +399,34 @@ The factor analysis can be generalized to independent component analysis(ICA), s
 ## 越高贵的人，越谦卑
 - 在这里，我发现蔡老师就是这句话的真实写照。带人亲和友善，喜欢开玩笑，非常有趣的一位老师。学数学的老师就是厉害，如果可以像他一样就好了。
 - 今天Robomaster比赛结束，华南虎排名季军。赛程非常紧迫，两三天就比完，大家的付出都有所回报，就已经心满意足，继续加油吧，少年~
+
+## meeting
+### Rule mining
+- Argument sky -> cloud
+- Predicate and one of its Argument
+
+- 2 steps: Entity Typing -> Relation Typing
+- 1 step: Fact about type
+
+**Configuration**
+- one transaction
+- triple like r(a,b)
+**AMIE**
+- Sampling: Find entity chains from two
+- Predicate selection: Synonymy scoring, Co-occurence scoring
+**Rule Evaluation**
+- Foreseeable diifculty : Document level transaction, knowledge-base
+
+- Questions
+  - 关联规则可挖掘。推理用“蕴含关系”来表示
+  - 因果关系和蕴含关系是币一样的
+  - 可读那么一定可写，但是可写不一定可读
+  - baseline是否可行，能挖出来什么？
+
+- Tasks
+  - 使用paddle还原算法之后，观察是否真的可以学到原有的性质
+  - 时间和相似度有怎样的提升效果
+  - LBM的对比验证
+  - 精度是否有提高
+  - 可以学习到多少的interaction
+  - 与传统的物理引擎相比，基于学习的物理引擎在于，无需约束条件
