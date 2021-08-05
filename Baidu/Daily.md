@@ -369,3 +369,33 @@ X战警系列也追完了。一开始几部是基于老的X教授和万磁王之
 X战警中存在的超级英雄实在太多，这也意味着很多人物的性格特点很难去塑造。  
 这里提到一部，暮年金刚狼，一反常态，并没有太多超级英雄的出场，通过情怀来将金刚狼的人物形象表现地淋漓尽致。画风惊奇，有创新。  
 最后提一句，今天看了一个TED演讲，有一句话很有收获：你的空闲时间，决定了你是一个怎样的人。
+
+# 2021/8/3
+## Nonlinear Eigenvalue Problem: general picture
+- Linearization
+- Eigenvector Dependent Nonlinear Eigenvalue Problems  
+Comments: Some of eigenvectors of the Linear and LargeAE nets show remarkable similarity with digits.
+
+Pros and Cons  
+- the meaning ofeigenvalue for neural networks
+- Theory limited
+
+## G
+The factor analysis can be generalized to independent component analysis(ICA), sparse coding  
+- Deep Latent Variable Model
+  - Nonlinear mapping by neural network
+  - MCMC Inference
+  - variational inference
+  - Adversarial learning
+
+- Latent Space Flow-Based Prior Model
+  - analytically tractable normalized density
+  - easy to draw samples from by using ancestral sampling
+- Generative Learning of Flow-Based Prior Model
+  - Learning prior model
+  - Learning generation model
+
+# 2021/8/5
+## 越高贵的人，越谦卑
+- 在这里，我发现蔡老师就是这句话的真实写照。带人亲和友善，喜欢开玩笑，非常有趣的一位老师。学数学的老师就是厉害，如果可以像他一样就好了。
+- 今天Robomaster比赛结束，华南虎排名季军。赛程非常紧迫，两三天就比完，大家的付出都有所回报，就已经心满意足，继续加油吧，少年~
