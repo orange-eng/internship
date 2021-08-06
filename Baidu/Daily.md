@@ -435,5 +435,7 @@ The factor analysis can be generalized to independent component analysis(ICA), s
 # 2021/8/6
 ## DE-GNN
 - comprehensive representation of scene graphs by encoding graphs' object-significant modal
+- Our energy-flow module is more suitable for processing graphs with meaningful edges and nodes with internal attributes
+- outperforms other SG-based models in four scene graph datasets, which are generated from VG dataset by four scene graph  generation methods.
 - Test on GQA & VQA-V2 dataset
 - explicit modeling of attributes impacts Performance
