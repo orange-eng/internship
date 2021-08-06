@@ -430,3 +430,10 @@ The factor analysis can be generalized to independent component analysis(ICA), s
   - 精度是否有提高
   - 可以学习到多少的interaction
   - 与传统的物理引擎相比，基于学习的物理引擎在于，无需约束条件
+
+
+# 2021/8/6
+## DE-GNN
+- comprehensive representation of scene graphs by encoding graphs' object-significant modal
+- Test on GQA & VQA-V2 dataset
+- explicit modeling of attributes impacts Performance
