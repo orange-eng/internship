@@ -439,3 +439,7 @@ The factor analysis can be generalized to independent component analysis(ICA), s
 - outperforms other SG-based models in four scene graph datasets, which are generated from VG dataset by four scene graph  generation methods.
 - Test on GQA & VQA-V2 dataset
 - explicit modeling of attributes impacts Performance
+##碟中谍
+开始看碟中谍了。先看的第二部，属于动作片，关于阻止病毒传播的。碟中谍原名叫 mission impossible，就是不可能完成的任务。学英语还是很有用的吧。
+
+# 2021/8/7
