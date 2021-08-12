@@ -462,3 +462,25 @@ The factor analysis can be generalized to independent component analysis(ICA), s
 - 虽然Dropout在特定模型上每一步的代价是微不足道的，但在一个完整的系统上使用Dropout的代价可能非常显著。因为Dropout是一个正则化技术，它减少了模型的有效容量。为了抵消这种影响，我们必须增大模型规模。不出意外的话，使用Dropout时最佳验证集的误差会低很多，但这是以更大的模型和更多训练算法的迭代次数为代价换来的。对于非常大的数据集，正则化带来的泛化误差减少得很小。在这些情况下，使用Dropout和更大模型的计算代价可能超过正则化带来的好处。
 - 只有极少的训练样本可用时，Dropout不会很有效。在只有不到 5000 的样本的Alternative Splicing数据集上 (Xiong et al., 2011)，贝叶斯神经网络 (Neal, 1996比Dropout表现得更好
 - Dropout说的简单一点就是：我们在前向传播的时候，让某个神经元的激活值以一定的概率p停止工作，这样可以使模型泛化性更强，因为它不会太依赖某些局部的特征
+
+# 2021/8/12
+## Boltzmann equation
+- Distribution function
+- Equilibrium state: Maxwellian
+- Interact with boundary: boundary condition
+
+- In flow BC
+- Specular reflection BC
+- Diffuse reflection BC
+- Scattering kernel
+- Cercignani-Lampis boundary condition
+- Accommodation coefficient
+- Result: global and stationary solution
+- Result: regularity of stationary solution
+- Group fairness in Federated learning
+  - Solve optimization problem collaboratively
+  - Fairness: Demographic parity
+  - Mix-up: data augmentation
+  - Relabel mix-up using generative method  
+面试也需要考虑时差的问题。
+  - 你对这些算法的落地感兴趣。老算法已经到瓶颈，但是使用新工具，会有一些新结果。
