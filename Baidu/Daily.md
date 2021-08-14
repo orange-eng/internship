@@ -479,3 +479,6 @@ The factor analysis can be generalized to independent component analysis(ICA), s
   - Relabel mix-up using generative method  
 面试也需要考虑时差的问题。
   - 你对这些算法的落地感兴趣。老算法已经到瓶颈，但是使用新工具，会有一些新结果。
+
+# 2021/8/14
+看完了花书，内容有点多，想要全部消化，还是很困难。这种“圣经”类的书籍，就要多看，多了解，也许在研究生阶段，学习到一些新的算法，再回头，会有更多感悟。
