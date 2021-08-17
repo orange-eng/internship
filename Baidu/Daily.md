@@ -522,4 +522,14 @@ The factor analysis can be generalized to independent component analysis(ICA), s
   - https://www.cc.gatech.edu/~parikh/citizenofcvpr/static/slides/schmid_good_research_and_evaluation.pdf
   - https://www.youtube.com/watch?v=imEtTnQKt4M&t=1359s
 
-  
+## Pursuit and Evasion: Heterogeneous agents competition
+- Passing against
+  - passers and balls
+- Continuous and Discrete
+  - straight line passing, all passers on the vertices
+- Trivial cases
+  - a winning strategy for interceptors
+- Coverage for interception
+- Reaching placements
+  - similar to a zero sum board game
+  - interceptor decision is a continuous function, and the precision is important to the validation of the winning condition
