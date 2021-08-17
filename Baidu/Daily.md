@@ -533,3 +533,10 @@ The factor analysis can be generalized to independent component analysis(ICA), s
 - Reaching placements
   - similar to a zero sum board game
   - interceptor decision is a continuous function, and the precision is important to the validation of the winning condition
+  - A exploration, like MCMC?
+  - Any sampling of strategy, or which passer to pass the ball to can work
+- Mathematical models
+  - Differential games
+  - Angel Problem
+  - Homicidal chauffeur games
+  - Princess and monster game
