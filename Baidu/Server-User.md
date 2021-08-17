@@ -27,34 +27,53 @@ import tensorflow as tf
 ```
 
 ### 常见命令
+- 安装常见指令
 ```python
 tar -zxvf cudnn.tgz			#这里的文件名要对应上下载的cudnn文件名  
 cd cuda 					# 此处进入cudnn解压的目录
-
+#
 cp ./include/cudnn.h ~/cuda-10.1/include		#复制粘贴  
 cp ./lib64/libcudnn* ~/cuda-10.1/lib64			#复制粘贴
 chmod a+r ~/cuda-10.1/include/cudnn.h ~/cuda-10.1/lib64/libcudnn*
-
+#
 vim ~/.bashrc     进入~/.bashrc  
 摁住ctrl+g，直接跳到最后一行，摁一下i键，进入插入模式，现在可以编辑文档了。
 source ~/.bashrc     更新bashrc使其生效
-
+#
 cat /etc/issue 查看centos版本	6.3
 ```
-- 查看cuda版本
+- 命令行常见指令
 ```python
-nvcc -V
+nvcc -V               # 查看cuda版本
+nvidia-smi            # 查看GPU版本
+ctrl + l              # 清屏，类似clear命令
+ls                    # 列出目录内容的意思
+cat /proc/cpuinfo     # 显示CPU info的信息
+date                  # 显示系统日期
+cd ..                 # 返回上一级目录
+mkdir dir1            # 创建一个叫做 ‘dir1’ 的目录’
+rm -rf dir1           # 删除一个叫做 ‘dir1’ 的目录并同时删除其内容
+mv dir1 new_dir       # 重命名/移动 一个目录
+cp -a dir1 dir2       # 复制一个目录
+zip file1.zip file1   #创建一个zip格式的压缩包
+unzip file1.zip       #解压一个zip格式压缩包
+
+
 ```
-- 查看GPU版本
-```python
-nvidia-smi
-```
+
 
 ### 常见命令（docker）
 - 查看容器数目
 ```python
-docker images # 查看镜像
-docker ps     # 列出容器相关信息
+docker images                       # 查看镜像
+docker ps                           # 列出容器相关信息
+docker exec -it caochengzhi bash    # 进入容器
+exit                                # 退出容器
+docker cp 源数据目录 目标目录        # 把源目录copy到目标目录
+docker cp /www/runoob 96f7f14e99ab:/www/
+#把主机/www/runoob目录拷贝到容器96f7f14e99ab的/www目录下。
+docker cp  96f7f14e99ab:/www /tmp/
+# 把容器96f7f14e99ab的/www目录拷贝到主机的/tmp目录中。
 ```
 
 # 非root用户在服务器上安装cuda10.0+cudnn7.6.5+tensorflow-gpu=1.15+python3.7
