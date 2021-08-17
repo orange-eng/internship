@@ -41,13 +41,22 @@ source ~/.bashrc     更新bashrc使其生效
 
 cat /etc/issue 查看centos版本	6.3
 ```
+- 查看cuda版本
+```python
+nvcc -V
+```
+- 查看GPU版本
+```python
+nvidia-smi
+```
+
 
 # 非root用户在服务器上安装cuda10.0+cudnn7.6.5+tensorflow-gpu=1.15+python3.7
 总的来说，坑是非常多的。这里推荐几个博客，说的很到位。
 - https://blog.csdn.net/dlh_sycamore/article/details/107600717
 - https://blog.csdn.net/weixin_43689163/article/details/106555955
 - https://blog.csdn.net/qq_35498453/article/details/110532839
-
+- https://blog.csdn.net/m0_37548423/article/details/81173678
 主要有下面几个步骤：
 ### 安装cuda10.0
 - 直接去官网，选择合适的配置。我的选择是：
