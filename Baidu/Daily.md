@@ -498,3 +498,28 @@ The factor analysis can be generalized to independent component analysis(ICA), s
 - Qiang Yang
 - Andrej Karpathy
 师兄中了一篇ICCV，但是在发表之前还要修修补补，所以没太多时间跟我聊天了。
+
+# 2021/8/17
+师兄推荐的有价值的链接如下：
+- How to do Research At the MIT AI Lab
+  - https://lamp.cfar.umd.edu/restricted/Misc/MITLab/mit.research.how.to.html
+  - http://dspace.mit.edu/bitstream/handle/1721.1/41487/AI_WP_316.pdf
+- Jianxiong Xiao - How to do research in Computer Vision?
+  - http://3dvision.princeton.edu/courses/COS598/2014sp/slides/lecture21_how2research.pdf
+- Sebastian Ruder
+  - https://ruder.io/10-tips-for-research-and-a-phd/
+- Research advice from Srinivasan Keshav
+  - http://blizzard.cs.uwaterloo.ca/keshav/wiki/index.php/Advice#Research_advice
+- Doing (Good) Research, Vladlen Koltun, University of Toronto
+  - https://youtu.be/4LEZED1YXm0?t=1420
+- How to do research, Bill Freeman, MIT
+  - http://people.csail.mit.edu/billf/publications/How_To_Do_Research.pdf
+  - http://6.869.csail.mit.edu/fa18/lecture/howToDoResearch1.pdf
+  - http://people.csail.mit.edu/billf/talks/10minFreeman2013.pdf
+- Phillip Isola  
+  - http://6.869.csail.mit.edu/fa18/lecture/howToDoResearch1.pdf
+- How to do good research, Cordelia Schmid
+  - https://www.cc.gatech.edu/~parikh/citizenofcvpr/static/slides/schmid_good_research_and_evaluation.pdf
+  - https://www.youtube.com/watch?v=imEtTnQKt4M&t=1359s
+
+  
