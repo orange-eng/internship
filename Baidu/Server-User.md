@@ -50,6 +50,12 @@ nvcc -V
 nvidia-smi
 ```
 
+### 常见命令（docker）
+- 查看容器数目
+```python
+docker images # 查看镜像
+docker ps     # 列出容器相关信息
+```
 
 # 非root用户在服务器上安装cuda10.0+cudnn7.6.5+tensorflow-gpu=1.15+python3.7
 总的来说，坑是非常多的。这里推荐几个博客，说的很到位。
