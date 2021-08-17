@@ -540,3 +540,12 @@ The factor analysis can be generalized to independent component analysis(ICA), s
   - Angel Problem
   - Homicidal chauffeur games
   - Princess and monster game
+  - Football passing and interception
+
+## Robust machine learning with limited observations   Shuo Yapeng
+- We calibrate the biased distribution into a more accurate estimation
+- Evaluation on a N-way-K-shot task
+- Error bound analysis
+- How to estimate the matrix
+- Noisy dataset generation
+这是一个2016级哈工大的本科生，直博到悉尼科技大学。做few-label的。只是比我大一年，就发了三篇顶级会议了，这差距太大了。
