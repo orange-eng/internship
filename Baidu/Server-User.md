@@ -58,6 +58,7 @@ cp -a dir1 dir2       # 复制一个目录
 zip file1.zip file1   #创建一个zip格式的压缩包
 unzip file1.zip       #解压一个zip格式压缩包
 
+ctrl + c              # 终止当前运行的程序
 
 ```
 
