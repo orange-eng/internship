@@ -48,3 +48,25 @@
 抽空学习了一下卡尔曼滤波，有一些不一样的体验。这里也简单记录一下。  
 链接（国外）：http://www.bzarg.com/p/how-a-kalman-filter-works-in-pictures/  
 链接（国内）：https://blog.csdn.net/u010720661/article/details/63253509
+
+**标准差的计算**
+先放上代码，用于求标准差：  
+```python
+import numpy as np
+arr = [1,2,3,4,5,6]
+#求均值
+arr_mean = np.mean(arr)
+#求方差
+arr_var = np.var(arr)
+#求标准差
+arr_std = np.std(arr,ddof=1)
+```
+在统计学中，  
+- 如果是总体，标准差公式根号内除以 n；
+- 如果是样本，标准差公式根号内除以（n-1）  
+
+numpy 的 .std() 和 pandas 的 .std() 函数之间是不同的。
+- numpy 计算的是总体(母体)标准差，参数ddof = 0。
+- pandas 计算的是样本标准差，参数ddof = 1。
+
+如果我们知道所有的分数，那么我们就有了总体——因此，要使用 pandas 进行归一化处理，我们需要将“ddof”设置为 0。
