@@ -102,6 +102,10 @@ chmod a+r ~/cuda-10.1/include/cudnn.h ~/cuda-10.1/lib64/libcudnn*
 
 **安装完anaconda之后，不能用conda指令：**  
 输入 export PATH="~/anaconda3/bin:$PATH”修改环境变量即可  
+
+**安装好之后，不能conda create**  
+这是由于没有激活环境。输入代码：“source activate”即可进入虚拟环境
+
 ### 创建虚拟环境python=3.7
 - 安装tensorflow-gpu==1.5
 
