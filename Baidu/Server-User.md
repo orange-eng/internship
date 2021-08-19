@@ -98,8 +98,10 @@ cp ./lib64/libcudnn* ~/cuda-10.1/lib64			#复制粘贴
 chmod a+r ~/cuda-10.1/include/cudnn.h ~/cuda-10.1/lib64/libcudnn*
 ```
 ### 安装anaconda
-- 安装anaconda3版本，主要是为了迎合python3.7
+- 安装anaconda3版本，主要是为了迎合python3.7   
 
+**安装完anaconda之后，不能用conda指令：**  
+输入 export PATH="~/anaconda3/bin:$PATH”修改环境变量即可  
 ### 创建虚拟环境python=3.7
 - 安装tensorflow-gpu==1.5
 
