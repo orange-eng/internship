@@ -549,3 +549,31 @@ The factor analysis can be generalized to independent component analysis(ICA), s
 - How to estimate the matrix
 - Noisy dataset generation
 这是一个2016级哈工大的本科生，直博到悉尼科技大学。做few-label的。只是比我大一年，就发了三篇顶级会议了，这差距太大了。
+
+# 2021/8/19  
+
+- Algorithm Overview
+  - the data assumption, the true Q function belongs to some set Q
+  - Given any "importance weight function" w from any normed function space
+  - Sufficient to solve the optimization with arbitrary approximation method, since the bound holds correct for any w.
+- Other methods
+  - Booststrapping
+    - Holds only asymptotically
+  - Bayesian methods
+    - Need approximate inference
+  - Distributional RL
+    - Quantifies intrinsic uncertainty in MDP, not estimation
+- Infinite-horizon Value Estimation
+  - Estimation J via Q-function:
+  - Estimate J via visitation distribution:
+- Infinite-Horizon OPE via Visitation Distribution
+- Infinite-Horizon OPE via Q-function
+  - Many classical methods for estimating Q-function
+- Functional/Kernel Bellman loss
+- Concentration Inequality of Kernel Bellman loss
+  - Decide  a model space  
+- Confidence Interval Using Kernel Bellman loss
+- Confidence Interval: Dual Form
+  - Primal bound, Dual bound
+- Conclusion
+  - New construct non-asymptotic confidence intervals for OPE
