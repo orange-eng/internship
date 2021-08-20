@@ -577,3 +577,13 @@ The factor analysis can be generalized to independent component analysis(ICA), s
   - Primal bound, Dual bound
 - Conclusion
   - New construct non-asymptotic confidence intervals for OPE
+
+# 2021/8/20
+## CDCF: Casual Discovery via Cholesky Factorization
+DAG:有向无环图
+- CDCF
+  - Input Data Matrix "X", truncate threshold
+  - Output Adjacent Matrix "A"
+
+- Cholesky 分解
+  - 把一个对称正定的矩阵表示成一个下三角矩阵L和其转置的乘积的分解。它要求矩阵的所有特征值必须大于零，故分解的下三角的对角元也是大于零的。Cholesky分解法又称平方根法，是当A为实对称正定矩阵时，LU三角分解法的变形。
