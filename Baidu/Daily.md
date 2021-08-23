@@ -618,3 +618,21 @@ DAG:有向无环图
 国家博物馆，老朋友了，第二次。（因为国家博物馆实在是太大了，跟人民大会堂交相呼应）  
 到目前为止，基本打卡了北京所有的景点，最后还想去爬香山，俯瞰整合京城，最后的愿望啦。
 ## 2021/8/23
+- Protein folding Problem
+  - 从一维的氨基酸向量，映射到三维具有空间结构的蛋白质。具有结构和功能。  
+- ML for protein folding problem
+  - Protein Data Bank
+- CASP contest
+- Global Distance Test : 1D prediction and 2D prediction
+- 结构描述为 distance map
+- input: Sequence and MSA feature
+- Model: Deep dilated Res-Conv Network
+
+- Protein geometrical model -> 球棍模型
+- 转角+序列->唯一确定蛋白质
+- Evoformer: Triangular multiplicative update
+
+- 报告的逻辑：
+  - 明确任务
+  - 建模方法
+  - 如何做的？做得复杂，调出来了
