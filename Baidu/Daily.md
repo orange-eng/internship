@@ -636,3 +636,33 @@ DAG:有向无环图
   - 明确任务
   - 建模方法
   - 如何做的？做得复杂，调出来了
+
+## 2021/8/24
+- Bound gaps between primes
+  - A prime gap is the difference between two successive prime numbers.
+
+- Determining Visual Motion in the Deep Learning Era
+  - Optical Flow
+    - 2D visual motion estimation
+    - 3D understanding of the world from raw image intensities
+    - Action Recognition
+    - Frame Interpolation
+    - Shape Reconstruction
+  - Challenges in Optical Flow Estimation
+    - Brightness variations
+    - Large motion
+    - Scale of the problem(dense displacements)
+    - Occlusions
+
+- Learning Optical flow from matches
+  - All-pairs correlation volume
+  - sparse correlation volume
+- Multi-scale Displaced order
+
+- Learing to estimate hidden motion
+  - challenges
+    - lack of matching information
+  - idea
+    - correlation volume: inter-frame similarities
+    - attention: intra-frame similarities
+    - Inspired by non-local means
