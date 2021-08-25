@@ -666,3 +666,10 @@ DAG:有向无环图
     - correlation volume: inter-frame similarities
     - attention: intra-frame similarities
     - Inspired by non-local means
+
+## 2021/8/25
+今天看了冰雪奇缘。看完之后其实并没有十分深刻的体会。可能是因为之前看了玩具总动员，比较动情，也很深奥，显得冰雪奇缘不是很好看了。哈哈，但是很有收获，每一个角色的设定。 整体感觉，故事叙述比较平庸，没有很令人感到惊讶的片段，相比于《玩具总动员》有些逊色。  
+- 做自己不代表可以随心所欲，但是不会轻易让别人动摇自己的决心。
+- "Being yourself" doesn't mean doing whatever it is that pleases you; rather it is not allowing your confidence to be shaken by anyone easily.
+- 对于心爱的人，你要更有耐心，因为或许那正是他们所需要的。
+- 我的乐观不是傻，但是我选择，不管如何都要让自己快乐。
